@@ -1,0 +1,250 @@
+/* General styles */
+body {
+    background-color: whitesmoke;
+    font-family: 'Candara', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: white; /* Changed navbar color to white */
+    color: darkolivegreen; /* Changed text color to olive green */
+    padding: 5px 20px; /* Reduced padding for a narrower navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Shifted text to the left */
+    height: 50px; /* Reduced navbar height */
+    position: relative; /* For pseudo-elements */
+}
+
+
+
+/* Navbar logo */
+.navbar .logo {
+    width: 50px;
+}
+
+/* Navbar brand name */
+.navbar .brand-name {
+    font-size: 20px; /* Reduced font size slightly */
+    font-weight: bold;
+    margin-left: 10px; /* Space between logo and brand name */
+}
+
+/* Navbar search bar */
+.navbar .search-bar {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid darkolivegreen; /* Added border color for better visibility */
+    margin-left: 20px; /* Space between search bar and nav links */
+}
+
+/* Navbar links */
+.navbar a {
+    color: darkolivegreen; /* Changed text color to olive green */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px; /* Reduced font size for smaller text */
+    position: relative;
+}
+
+/* Navbar links hover effect */
+.navbar a:hover {
+    color: olive;
+    text-decoration: underline;
+}
+
+/* Navbar links before */
+.navbar a::before {
+    content: "|";
+    margin: 0 10px;
+    color: darkolivegreen;
+    opacity: 0.5;
+}
+
+/* Hero section */
+.hero {
+    background-color: #f5f5dc;
+    height: 40vh; /* Set height relative to viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For pseudo-elements */
+}
+
+.hero::before {
+    content: "Featured";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: darkolivegreen;
+}
+
+/* Hero image */
+.hero .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Section styles */
+.section {
+    padding: 20px;
+    text-align: center;
+    min-height: 50vh; /* Ensure sections take up a minimum of 50% of the viewport height */
+    position: relative; /* Ensure relative positioning for absolute child positioning */
+}
+
+/* Section heading */
+.section h2 {
+    margin-bottom: 10px; /* Space below the title */
+    position: relative; /* For upward movement */
+    top: -20px; /* Move section title upwards */
+}
+
+/* Section background colors */
+.best-sellers {
+    background-color: #fafad2;
+}
+
+.best-brands {
+    background-color: #f0e68c;
+}
+
+.oily-acne {
+    background-color: #e0e0b0;
+}
+
+.dry-skin {
+    background-color: #d3d3a3;
+}
+
+.pocket-friendly {
+    background-color: #c4c49b;
+}
+
+/* Product card styles */
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px; /* Increased space between cards */
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: calc(30% - 30px); /* Adjusted width for a more square-like appearance */
+    box-sizing: border-box;
+    text-align: center;
+    height: 300px; /* Keep fixed height */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Space out content */
+    position: relative; /* Ensure relative positioning for absolute child positioning */
+    overflow: hidden; /* Prevent content overflow */
+    text-decoration: none; /* Remove underline for links */
+    color: inherit; /* Inherit text color */
+}
+
+/* Product card hover effect */
+.product-card:hover {
+    background-color: #f0f0f0;
+    border: 2px solid darkolivegreen;
+}
+
+/* Product card pseudo-elements */
+.product-card::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 2px solid darkolivegreen;
+    border-radius: 12px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover::before {
+    border-color: olive;
+}
+
+/* Product card image container */
+.product-card .image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Product card text container */
+.product-card .text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Product card image */
+.product-card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover; /* Ensuring images fit within the box */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Product card title */
+.product-card h3 {
+    margin: 0; /* Remove margin for title */
+    position: relative; 
+    top: -10px; /* Move title upwards */
+}
+
+/* Product card description */
+.product-card p {
+    margin: 0;
+    line-height: 1.2; /* Decrease space between lines of product description */
+    position: relative; 
+    top: -10px; /* Move description upwards */
+}
+
+/* Footer styles */
+.footer {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer .footer-content div {
+    margin: 10px;
+    width: 200px;
+}
+
+/* Footer links */
+.footer .footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer links hover effect */
+.footer .footer-content a:hover {
+    text-decoration: underline;
+}
